@@ -26,3 +26,13 @@ You can do something different from the idea you had in CA 1 but in this instanc
 # Project Introduction & Overview 
 
 **Project title (App Name):** Travelio 
+
+**Purpose and Functionality:** 
+
+Travelio is a mobile app designed to [briefly describe the app’s primary purpose, e.g., help users track their fitness goals, manage tasks, learn a language, etc.]. It stands out by incorporating unique elements that extend beyond the examples provided in class. The app allows users to [list core features, e.g., input data, upload images, receive feedback or results, interact with visual elements]. Key functionalities include:
+
+• [Feature 1, e.g., a visually intuitive dashboard to track progress or display user-generated data.]
+
+• [Feature 2, e.g., uploading and storing images/data to Firebase.]
+
+• [Feature 3, e.g., dynamic manipulation of user data using useState() with arrays of objects.]
