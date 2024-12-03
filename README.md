@@ -22,3 +22,7 @@ You can do something different from the idea you had in CA 1 but in this instanc
 2. Keep a log of AI prompts/responses with timestamps.
 
 3. Write a ½-page reflection on AI use, including tools, usefulness, limitations, impact on learning, and how AI enhanced app functionality.
+
+# Project Introduction & Overview 
+
+**Project title (App Name):** Travelio 
