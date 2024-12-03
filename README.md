@@ -1,15 +1,3 @@
-# Week 5 Lab - A React Native Cinema Booking Application
-This lab aims to build on previous techniques by using local persistent storage within our app to store data.
-
-Goal
-The goals for this weeks lab are
-- To build on the previous cinema booking example
-- To add a single json object to store booking details in a hook
-- To pass the state and the setState using props to the PersonalInfo Component and the MovieBooking Component
-- To use a UUID unique identifier generated from the Crypto library
-- To store the booking as a json object using local data AsyncStorage.setItem()
-- To retrieve the data from local storage using AysncStorage.getItem()
-
 # Part 1
 Add the following code snippet inside the App.js component. Place it inside the App() function but before the return () block.
 ```
