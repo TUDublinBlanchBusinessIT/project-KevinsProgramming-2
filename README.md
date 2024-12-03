@@ -36,3 +36,13 @@ Travelio is a mobile app designed to [briefly describe the app’s primary purpo
 • [Feature 2, e.g., uploading and storing images/data to Firebase.]
 
 • [Feature 3, e.g., dynamic manipulation of user data using useState() with arrays of objects.]
+
+**Technology and Innovation:**
+
+**User Experience (UX):**
+
+**Data Management:**
+
+**AI Utilization:**
+
+**Development and Version Control:**
