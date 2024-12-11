@@ -6,6 +6,7 @@ import { Picker } from '@react-native-picker/picker';
 import { ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Linking } from 'react-native';
+import 'firebase/compat/auth';
 
 
 const Tab = createMaterialTopTabNavigator();
