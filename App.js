@@ -1,35 +1,107 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { View, Text, TextInput, Button, StyleSheet, Image } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
+const Tab = createMaterialTopTabNavigator();
 
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
+function RegistrationScreen({ navigation }) {
+  const [email, setEmail] = useState('');
+  const [student_id, setStudentID] = useState('');
 
-export default function App() {
+  const handleRegister = () => {
+    alert(`login with:
+      Student ID: ${student_id},
+      Email: ${email}`);
+  };
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
-      </Text>
-      <Card>
-        <AssetExample />
-      </Card>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Image style={styles.logo} source={require('./assets/firebase-icon.png')} />
+
+      <Text style={styles.title}>Register</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Student ID"
+        value={student_id}
+        onChangeText={setStudentID}
+      />
+            <TextInput
+        style={styles.input}
+        placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+      />
+      <Button title="Register" onPress={handleRegister} />
+    </View>
   );
 }
 
+// Color Picker Screen Component
+function ColorPickerScreen() {
+  const [selectedColor, setSelectedColor] = useState("Red");
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Pick Your Favorite Color</Text>
+      <Picker style={styles.picker} selectedValue={selectedColor} onValueChange={setSelectedColor}>
+        <Picker.Item label="Red" value="Red" />
+        <Picker.Item label="Blue" value="Blue" />
+        <Picker.Item label="Green" value="Green" />
+        <Picker.Item label="Purple" value="Purple" />
+      </Picker>
+      <Text style={styles.selectedColorText}>Selected Color: {selectedColor}</Text>
+    </View>
+  );
+}
+
+// Main App Component with Navigation
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Register" component={RegistrationScreen} />
+        <Tab.Screen name="Favorite Color" component={ColorPickerScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+    padding: 20,
   },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 24,
     fontWeight: 'bold',
-    textAlign: 'center',
+    marginBottom: 20,
+  },
+  input: {
+    width: '100%',
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
+  picker: {
+    width: '100%',
+    height: 40,
+  },
+  selectedColorText: {
+    marginTop: 20,
+    fontSize: 18,
   },
 });
