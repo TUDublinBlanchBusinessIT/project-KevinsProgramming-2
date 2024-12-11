@@ -25,11 +25,13 @@ function RegistrationScreen({ navigation }) {
     <View style={styles.container}>
       <Image style={styles.logo} source={require('./assets/TUDublin.png')} />
 
-      <View style={styles.articleContentContainer}>
-        <Text style={styles.articleContent}>
-          Your mini guide to live, work, invest and study at TU Dublin
-        </Text>
+
+      <View style={styles.heroSection}>
+        <Text style={styles.heroTextTitle}>Infinite Possibilities</Text>
+        <Text style={styles.heroTextSubtitle}>Find your desired course at TU Dublin</Text>
       </View>
+
+
 
       <TextInput
         style={styles.input}
@@ -50,13 +52,13 @@ function RegistrationScreen({ navigation }) {
 
      <Text style={styles.heading}>Why TUD?</Text>
       <Text style={styles.article}>
-        Travelio is an established organisation with the primary goal of fostering a collaborative space where
+        TUD is an established organisation with the primary goal of fostering a collaborative space where
         participants can effortlessly exchange valuable tips and insights...
       </Text>
 
       <Text style={styles.subHeading}>What We Offer</Text>
       <Text style={styles.article}>
-        Travelio is a committed online resource that has been helping prospective students find courses and colleges
+        TUD has a committed online resource that has been helping prospective students find courses and colleges
         around the world for a number of years...
       </Text>
 
@@ -65,21 +67,6 @@ function RegistrationScreen({ navigation }) {
         "Exciting prospects lie ahead, and anticipation is in the air." Uncharted territories and fresh starts
         abound; the possibilities are endless...
       </Text>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <View style={styles.footer}>
@@ -195,10 +182,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 10,
   },
-  articleContentContainer: {
-    backgroundColor: '#ebebeb',
-    padding: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
+    heroTextTitle: {
+    fontSize: 24,
+    color: 'Black',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  heroTextSubtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: 'Black',
   },
 });
